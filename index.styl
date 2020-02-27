@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap')
+
+body
+  margin: 0;
+  font-family: "Muli", sans-serif !important;
+
+.page-title
+  color #333
+  text-align center
+  font-size 20px
+  margin 20px 0 40px
+
+.main-content
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 35px;
+
+.main-bio-card
+  border-color #e5e9f0 !important
+  .card-content
+    display flex
+    padding 20px
+    justify-content left
+    height 240px
+    .profile-picture
+      width 200px
+      height 200px
+      min-width 200px
+      min-height 200px
+      align-self center
+      border-radius .3em
+      overflow hidden
+      box-shadow 0 2px 12px 3px rgba(0,0,0,0.1)
+      img
+        width 100%
+        height 100%
+
+    .profile-info
+      margin-left 20px
+      width 400px
+      overflow-y auto
+      overflow-x hidden
+      .profile-name
+        font-weight 800
+        font-size 35px
+        color #333
+        letter-spacing 0.5px
+        marign 0 0 20px
+      .profile-bio
+        color grey
+        font-size 15px
+        margin 0
+        letter-spacing: .3px
+        max-width 800px
+    .divider
+      background #e5e9f0
+      height 200px
+      margin 0 20px
+      width 1px
+    .generic-info
+      display flex
+      justify-content center
+      overflow-y auto
+      overflow-x hidden
+      flex-flow wrap row
+      height 200px
+      align-items center
+      .info-wrap
+        margin -5px 20px 10px
+        text-align center
+        label
+          color grey
+          font-size 12px
+          font-weight bold
+          margin 0
+        p
+          margin 0
+          font-size 16px
+.bottom-container
+  display flex
+  justify-content space-between
+  margin-top 20px
+  width 100%
+  .left-container
+    width 350px
+    .page-widget
+      height 200px
+      width 100%
+      overflow-y hidden
+      &.best-friends-wrap,
+      &.blocked-wrap
+        height 135px !important
+      &.friends-wrap
+        height 275px
+      .users
+        margin-top 15px
+        margin-left 15px
+        overflow-y auto
+        overflow-x hidden
+        .user-wrap
+          margin-bottom 15px
+          display flex
+          justify-content left
+          align-items center
+          .profile-picture
+            border-radius 10000px
+            height 55px
+            width 55px
+            position relative
+            margin-right 10px
+            overflow hidden
+            border 1px solid lightgrey
+            img
+              width 100%
+              height 100%
+          .username
+            color #333
+            font-size 17px
+            letter-spacing .3px
+            margin 0
+  .right-container
+    width calc(100% - 370px)
+    .page-widget
+      height 282.5px
+      width 100%
+      &.comments-wrap
+        overflow-y hidden
+        height fit-content !important
+        .all-comments
+          width calc(100% - 30px)
+          margin-left 15px
+          margin-top 20px
+          position relative
+          overflow-y auto
+          .comment
+            padding 10px
+            border-radius .3em
+            border 1px solid #e5e9f0
+            width 100%
+            margin-bottom 10px
+            .user
+              color #333
+              font-size 14px
+              margin 0 0 10px
+              b
+                text-decoration underline
+            .message
+              color grey
+              font-size 15px
+              letter-spacing .3px
+              line-height: 120%
+              margin 0
+      &.posts-wrap
+        .no-posts-wrap
+          width 100%
+          height calc(100% - 55px)
+          overflow hidden
+          position relative
+          .msg
+            position absolute
+            top calc(50% - 10px)
+            left 50%
+            transform translate(-50%, -50%)
+            color rgb(161, 161, 161)
+            font-size 16px
+            text-align center
+            margin 0
+          .web
+            background-image url('imgs/spider-web.png')
+            background-size cover
+            background-position center
+            background-repeat no-repeat
+            width 350px
+            height 350px
+            position absolute
+            opacity 0.12
+            &.web1
+              top -180px
+              left -200px
+            &.web2
+              top -220px
+              right -170px
+              transform rotate(-45deg)
+  .page-widget
+    border-radius .3em
+    border 1px solid #e5e9f0
+    overflow hidden
+    margin-bottom 20px
+    .top-container
+      background #e5e9f0
+      height 50px
+      width 100%
+      position relative
+      .title
+        color #333
+        font-size 18px
+        font-weight bold
+        position absolute
+        left 15px
+        top 50%
+        transform translateY(-50%)
+
+@media only screen and (max-width 900px)
+  .main-bio-card
+    .divider
+      display none !important
+  .posts-wrap
+    .web
+      display none !important
